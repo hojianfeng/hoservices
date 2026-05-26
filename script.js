@@ -262,7 +262,7 @@
     fd.append('_captcha', 'false');
 
     /* Replace YOUR_EMAIL with the actual destination email */
-    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@print.com.sg';
+    const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hoservices1@gmail.com';
 
     try {
       const res = await fetch(FORM_ENDPOINT, {

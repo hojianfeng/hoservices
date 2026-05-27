@@ -515,7 +515,7 @@ h1, h2, h3, h4, h5 {
 }
 .about-badge {
   position: absolute;
-  bottom: -20px;
+  top: -16px;
   right: -16px;
   background: var(--accent);
   color: white;
@@ -702,6 +702,7 @@ h1, h2, h3, h4, h5 {
   background: var(--off-white);
 }
 .product-img svg { width: 100%; height: 100%; }
+.product-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .product-overlay {
   position: absolute;
@@ -1315,6 +1316,6 @@ h1, h2, h3, h4, h5 {
   .quote-form-wrap { padding: 24px 16px; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { width: 100%; justify-content: center; }
-  .about-badge { bottom: -10px; right: -8px; }
+  .about-badge { top: -10px; right: -8px; }
   .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
 }

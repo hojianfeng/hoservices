@@ -213,21 +213,26 @@ h1, h2, h3, h4, h5 {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-head);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
-.logo-mark {
-  height: 38px;
+.nav-logo-img-wrap {
+  background: white;
+  border-radius: 8px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+  transition: box-shadow var(--transition);
+}
+.nav-logo:hover .nav-logo-img-wrap {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.nav-logo-img {
+  height: 40px;
   width: auto;
-  flex-shrink: 0;
+  display: block;
 }
-.footer-logo .logo-mark { height: 42px; }
-.logo-text .accent { color: var(--accent); }
+.footer-logo .nav-logo-img { height: 48px; }
 
 .nav-links {
   display: none;
@@ -480,10 +485,33 @@ h1, h2, h3, h4, h5 {
   border-radius: var(--radius-lg);
   overflow: visible;
 }
-.about-svg {
-  width: 100%;
+.about-logo-card {
+  background: white;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
+  padding: 48px 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.about-logo-img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+}
+.about-logo-tagline {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-grey);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-top: 2px solid var(--accent);
+  padding-top: 16px;
+  width: 100%;
+  text-align: center;
 }
 .about-badge {
   position: absolute;

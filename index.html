@@ -35,6 +35,7 @@
       </ul>
       <div class="nav-actions">
         <a href="#quote" class="btn btn-primary btn-sm">Get a Quote</a>
+        <button id="langToggle" class="lang-toggle" aria-label="Switch language">中文</button>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -101,12 +102,12 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-badge fade-in">
-        <span class="badge-dot"></span> Trusted Print Partner in Singapore
+        <span class="badge-dot"></span><span class="badge-text"> Trusted Print Partner in Singapore</span>
       </div>
       <h1 class="hero-title fade-in fade-delay-1">
-        Fast, Reliable<br />
-        <span class="accent">Printing Services</span><br />
-        in Singapore
+        <span data-i18n="heroLine1">Fast, Reliable</span><br />
+        <span class="accent" data-i18n="heroAccent">Printing Services</span><br />
+        <span data-i18n="heroLine3">in Singapore</span>
       </h1>
       <p class="hero-sub fade-in fade-delay-2">
         From business cards to flyers, stickers, booklets, binding, scanning, and corporate printing —<br class="hide-mobile" />
@@ -800,7 +801,7 @@
       <div class="faq-list">
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            What file formats do you accept for printing?
+            <span class="faq-q-text">What file formats do you accept for printing?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a">
@@ -809,7 +810,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            How long does printing take?
+            <span class="faq-q-text">How long does printing take?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a">
@@ -818,7 +819,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            Can you help with design if I don't have artwork?
+            <span class="faq-q-text">Can you help with design if I don't have artwork?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a">
@@ -827,7 +828,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            Is there a minimum order quantity?
+            <span class="faq-q-text">Is there a minimum order quantity?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a">
@@ -836,7 +837,7 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" aria-expanded="false">
-            Do you offer delivery services?
+            <span class="faq-q-text">Do you offer delivery services?</span>
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a">
@@ -945,7 +946,7 @@
                 <span class="btn-text">Send Quote Request</span>
                 <span class="btn-loader hidden">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="spin"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" opacity="0.25"/><path d="M12 3a9 9 0 019 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                  Sending...
+                  <span class="btn-sending-text">Sending...</span>
                 </span>
               </button>
             </div>

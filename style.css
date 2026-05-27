@@ -1319,3 +1319,34 @@ h1, h2, h3, h4, h5 {
   .about-badge { top: -10px; right: -8px; }
   .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
 }
+
+/* ---- Language toggle button ---- */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 5px 11px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+.navbar.scrolled .lang-toggle {
+  border-color: rgba(15,30,61,0.4);
+  color: var(--navy);
+}
+.navbar.scrolled .lang-toggle:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+@media (max-width: 768px) {
+  .lang-toggle { font-size: 0.7rem; padding: 4px 9px; }
+}

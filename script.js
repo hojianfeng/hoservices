@@ -395,7 +395,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       footerH:['Quick Links','Print Services','Contact'],
       fLinks:['Home','About Us','Services','Products','Why Choose Us','Request Quote','Contact'],
       fServices:['Business Card Printing','Flyer Printing','Sticker Printing','Booklet Printing','Banner Printing','Binding Services','Artwork Design'],
-      footerCopy:'© 2024 Ho Services. All rights reserved. | Printing Services Singapore',
+      footerCopy:'© 2025 Ho Services. All rights reserved. | Printing Services Singapore',
     },
 
     zh: {
@@ -478,7 +478,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       footerH:['快捷链接','印刷服务','联系方式'],
       fLinks:['首页','关于我们','服务','产品','为何选择我们','申请报价','联系'],
       fServices:['名片印刷','传单印刷','贴纸印刷','书册印刷','横幅印刷','装订服务','美术设计'],
-      footerCopy:'© 2024 Ho Services. 版权所有。| 新加坡印刷服务',
+      footerCopy:'© 2025 Ho Services. 版权所有。| 新加坡印刷服务',
     }
   };
 
@@ -521,7 +521,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (hstats[2]) hstats[2].textContent = t.heroStat3;
 
     /* -- about -- */
-    set('.about-logo-tagline', t.aboutTagline);
     set('.badge-label', t.aboutBadgeLabel);
     set('#about .section-label', t.aboutLabel);
     set('#about .section-title', t.aboutTitle);

@@ -855,7 +855,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-head);
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--accent);
+  color: #fff;
   line-height: 1;
   display: inline-block;
 }
@@ -863,7 +863,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-head);
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--accent);
+  color: #fff;
   line-height: 1;
 }
 

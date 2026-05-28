@@ -5,6 +5,11 @@
 
 /* ---- CSS Variables ---- */
 :root {
+  --cmyk-c:      #00AEEF;
+  --cmyk-m:      #EC008C;
+  --cmyk-y:      #FFF200;
+  --cmyk-k:      #231F20;
+
   --navy:        #00008b;
   --navy-mid:    #0022bb;
   --navy-light:  #0044cc;
@@ -83,7 +88,51 @@ h1, h2, h3, h4, h5 {
 
 /* ---- Backgrounds ---- */
 .bg-light { background: var(--light-grey); }
-.bg-navy  { background: var(--navy); }
+.bg-navy  {
+  background: var(--navy);
+  background-image:
+    radial-gradient(circle, rgba(0,174,239,0.045) 1px, transparent 1px),
+    radial-gradient(circle, rgba(236,0,140,0.03)  1px, transparent 1px);
+  background-size: 24px 24px, 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* ============================================================
+   CMYK PRINT ACCENTS
+   ============================================================ */
+
+/* Top-of-page CMYK colour registration bar */
+.cmyk-bar {
+  display: flex;
+  height: 4px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  pointer-events: none;
+}
+.cmyk-bar span { flex: 1; }
+.cmyk-bar .cmyk-c { background: var(--cmyk-c); }
+.cmyk-bar .cmyk-m { background: var(--cmyk-m); }
+.cmyk-bar .cmyk-y { background: var(--cmyk-y); }
+.cmyk-bar .cmyk-k { background: var(--cmyk-k); }
+
+/* Footer CMYK ink dot indicators */
+.cmyk-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 14px;
+}
+.cmyk-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+.cmyk-dots .dot-c { background: var(--cmyk-c); }
+.cmyk-dots .dot-m { background: var(--cmyk-m); }
+.cmyk-dots .dot-y { background: var(--cmyk-y); }
+.cmyk-dots .dot-k { background: #888; border: 1px solid rgba(255,255,255,0.2); }
 
 /* ---- Accent & Utilities ---- */
 .accent { color: var(--accent); }

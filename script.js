@@ -359,7 +359,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       whyusSub:'Your satisfaction is our priority — backed by decades of printing expertise',
       bt:['30 Years of Experience','Wide Range of Services','Competitive Pricing','Fast Turnaround','Design &amp; Print Support','Easy Quote Request'],
       bd:['Decades of hands-on expertise in design and printing. We know what works for every print job.','From a single business card to a thousand banners — we handle all types of print orders.','Transparent, affordable pricing with no hidden costs. Great quality at the right price.','Urgent jobs handled with care. We deliver on time so your business never misses a deadline.',"Don't have a print-ready file? Our designers can help create or fix your artwork.",'Request a quote online in minutes — no complicated forms, just tell us what you need.'],
-      statL:['Years of Experience','Print Services','Happy Customers','Print Jobs Completed'],
+      statL:['Years of Experience','Print Services','Pages Printed','On-Time Delivery'],
       /* faq */
       faqLabel:'Common Questions',
       faqTitle:'Frequently Asked <span class="accent">Questions</span>',
@@ -442,7 +442,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       whyusSub:'您的满意是我们的首要任务——以数十年印刷专业知识为后盾',
       bt:['30年经验','广泛服务范围','具竞争力的价格','快速交货','设计和印刷支持','轻松报价申请'],
       bd:['在设计和印刷方面拥有数十年实战经验，了解每种印刷工作的最佳方案。','从一张名片到一千条横幅——我们处理所有类型的印刷订单。','透明、实惠的价格，无隐藏费用。优质品质，合理价格。','紧急工作用心处理，我们准时交付，让您的业务不错过任何截止日期。','没有印刷就绪文件？我们的设计师可帮助创建或修改您的美术稿。','在线几分钟内申请报价——无复杂表格，只需告诉我们您的需求。'],
-      statL:['年经验','印刷服务','满意客户','完成印刷工作'],
+      statL:['年经验','印刷服务','印张出品','准时交付率'],
       /* faq */
       faqLabel:'常见问题',
       faqTitle:'常见<span class="accent">问题</span>',

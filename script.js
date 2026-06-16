@@ -687,7 +687,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   const prev = document.getElementById('posterPrev');
   const next = document.getElementById('posterNext');
   if (!carousel || !prev || !next) return;
-  const slideWidth = () => carousel.querySelector('.poster-slide').offsetWidth + 16;
+
+  function slideWidth() {
+    const slide = carousel.querySelector('.poster-slide');
+    return slide ? slide.offsetWidth + 20 : 340;
+  }
+
+  function updateButtons() {
+    const scrollable = carousel.scrollWidth > carousel.clientWidth + 2;
+    prev.style.display = scrollable ? '' : 'none';
+    next.style.display = scrollable ? '' : 'none';
+    if (scrollable) {
+      prev.disabled = carousel.scrollLeft <= 0;
+      next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2;
+    }
+  }
+
   prev.addEventListener('click', () => carousel.scrollBy({ left: -slideWidth(), behavior: 'smooth' }));
   next.addEventListener('click', () => carousel.scrollBy({ left: slideWidth(), behavior: 'smooth' }));
+  carousel.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
 })();

@@ -1402,6 +1402,21 @@ h1, h2, h3, h4, h5 {
   color: #fff;
   border-color: var(--navy);
 }
+
+/* ===== Shop Front Photo ===== */
+.shop-photo-wrap {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(15,30,61,0.12);
+}
+.shop-front-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 @media (max-width: 768px) {
   .lang-toggle { font-size: 0.7rem; padding: 4px 9px; }
 }
+

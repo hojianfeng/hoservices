@@ -681,31 +681,38 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   }
 })();
 
-/* ===== Poster Carousel ===== */
+/* ===== Gallery Carousels ===== */
 (function () {
-  const carousel = document.getElementById('posterCarousel');
-  const prev = document.getElementById('posterPrev');
-  const next = document.getElementById('posterNext');
-  if (!carousel || !prev || !next) return;
+  function initCarousel(carouselId, prevId, nextId) {
+    const carousel = document.getElementById(carouselId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
+    if (!carousel || !prev || !next) return;
 
-  function slideWidth() {
-    const slide = carousel.querySelector('.poster-slide');
-    return slide ? slide.offsetWidth + 20 : 340;
-  }
-
-  function updateButtons() {
-    const scrollable = carousel.scrollWidth > carousel.clientWidth + 2;
-    prev.style.display = scrollable ? '' : 'none';
-    next.style.display = scrollable ? '' : 'none';
-    if (scrollable) {
-      prev.disabled = carousel.scrollLeft <= 0;
-      next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2;
+    function slideWidth() {
+      const slide = carousel.querySelector('.gallery-slide');
+      return slide ? slide.offsetWidth + 20 : 340;
     }
+
+    function updateButtons() {
+      const scrollable = carousel.scrollWidth > carousel.clientWidth + 2;
+      prev.style.display = scrollable ? '' : 'none';
+      next.style.display = scrollable ? '' : 'none';
+      if (scrollable) {
+        prev.disabled = carousel.scrollLeft <= 0;
+        next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2;
+      }
+    }
+
+    prev.addEventListener('click', () => carousel.scrollBy({ left: -slideWidth(), behavior: 'smooth' }));
+    next.addEventListener('click', () => carousel.scrollBy({ left: slideWidth(), behavior: 'smooth' }));
+    carousel.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
   }
 
-  prev.addEventListener('click', () => carousel.scrollBy({ left: -slideWidth(), behavior: 'smooth' }));
-  next.addEventListener('click', () => carousel.scrollBy({ left: slideWidth(), behavior: 'smooth' }));
-  carousel.addEventListener('scroll', updateButtons, { passive: true });
-  window.addEventListener('resize', updateButtons);
-  updateButtons();
+  initCarousel('posterCarousel',   'posterPrev',   'posterNext');
+  initCarousel('stickerCarousel',  'stickerPrev',  'stickerNext');
+  initCarousel('bindingCarousel',  'bindingPrev',  'bindingNext');
+  initCarousel('mountingCarousel', 'mountingPrev', 'mountingNext');
 })();

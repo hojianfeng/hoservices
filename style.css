@@ -1404,7 +1404,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ===== Poster Carousel ===== */
-.poster-carousel-wrap {
+.gallery-carousel-wrap {
   margin-top: 56px;
   padding-top: 40px;
   border-top: 1px solid var(--border);
@@ -1439,7 +1439,7 @@ h1, h2, h3, h4, h5 {
 }
 .carousel-btn:hover { background: var(--navy); color: #fff; }
 .carousel-btn:disabled { opacity: 0.3; pointer-events: none; }
-.poster-carousel {
+.gallery-carousel {
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -1447,8 +1447,8 @@ h1, h2, h3, h4, h5 {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.poster-carousel::-webkit-scrollbar { display: none; }
-.poster-slide {
+.gallery-carousel::-webkit-scrollbar { display: none; }
+.gallery-slide {
   flex: 0 0 calc(33.333% - 14px);
   scroll-snap-align: start;
   border-radius: var(--radius);
@@ -1456,17 +1456,17 @@ h1, h2, h3, h4, h5 {
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
 }
-.poster-slide:hover {
+.gallery-slide:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
-.poster-slide img {
+.gallery-slide img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
-.poster-slide-label {
+.gallery-slide-label {
   display: block;
   padding: 10px 14px;
   background: var(--white);
@@ -1475,7 +1475,7 @@ h1, h2, h3, h4, h5 {
   color: var(--navy);
 }
 @media (max-width: 768px) {
-  .poster-slide { flex: 0 0 75vw; }
+  .gallery-slide { flex: 0 0 75vw; }
   .carousel-title { font-size: 1.1rem; }
 }
 

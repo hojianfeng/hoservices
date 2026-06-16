@@ -1403,6 +1403,86 @@ h1, h2, h3, h4, h5 {
   border-color: var(--navy);
 }
 
+/* ===== Poster Carousel ===== */
+.poster-carousel-wrap {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.carousel-title {
+  font-size: 1.4rem;
+  margin: 4px 0 0;
+}
+.carousel-arrows {
+  display: flex;
+  gap: 8px;
+}
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--navy);
+  background: transparent;
+  color: var(--navy);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-btn:hover {
+  background: var(--navy);
+  color: #fff;
+}
+.poster-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+.poster-carousel::-webkit-scrollbar { display: none; }
+.poster-slide {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.poster-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.poster-slide img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.poster-slide-label {
+  display: block;
+  padding: 10px 14px;
+  background: var(--white);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+@media (max-width: 600px) {
+  .poster-slide { flex: 0 0 260px; }
+  .carousel-title { font-size: 1.1rem; }
+}
+
 /* ===== Shop Front Photo ===== */
 .shop-photo-wrap {
   margin-top: 2rem;
